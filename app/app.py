@@ -19,7 +19,7 @@ def hello_world():
         if str(myage) =='' or str(mysalary) =='':
             return render_template('index.html', href2='static/none.png', href3='Please insert your age and salary range.')
         else:
-            model = load('app/Car-Recommender2.joblib')
+            model = load('app/car-recommender2.joblib')
             np_arr = np.array([myage, mysalary])
             predictions = model.predict([np_arr])  
             predictions_to_str = str(predictions)
